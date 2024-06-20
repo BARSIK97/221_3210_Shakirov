@@ -14,43 +14,41 @@
    <string>Игровое Поле</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <!-- Создание 9 кнопок для игрового поля 3x3 -->
-   <item row="0" column="0">
+   <item row="1" column="0">
     <widget class="QPushButton" name="card1"/>
    </item>
-   <item row="0" column="1">
+   <item row="1" column="1">
     <widget class="QPushButton" name="card2"/>
    </item>
-   <item row="0" column="2">
+   <item row="1" column="2">
     <widget class="QPushButton" name="card3"/>
    </item>
-   <item row="1" column="0">
+   <item row="2" column="0">
     <widget class="QPushButton" name="card4"/>
    </item>
-   <item row="1" column="1">
+   <item row="2" column="1">
     <widget class="QPushButton" name="card5"/>
    </item>
-   <item row="1" column="2">
+   <item row="2" column="2">
     <widget class="QPushButton" name="card6"/>
    </item>
-   <item row="2" column="0">
+   <item row="3" column="0">
     <widget class="QPushButton" name="card7"/>
    </item>
-   <item row="2" column="1">
+   <item row="3" column="1">
     <widget class="QPushButton" name="card8"/>
    </item>
-   <item row="2" column="2">
+   <item row="3" column="2">
     <widget class="QPushButton" name="card9"/>
    </item>
-   <!-- Размещаем кнопку сброса и счетчик очков -->
-   <item row="3" column="0">
+   <item row="0" column="0">
     <widget class="QPushButton" name="resetButton">
      <property name="text">
       <string>Сброс</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
+   <item row="0" column="1">
     <widget class="QLabel" name="scoreLabel">
      <property name="text">
       <string>Очки: 0</string>
