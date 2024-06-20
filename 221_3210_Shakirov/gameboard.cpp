@@ -4,7 +4,6 @@
 #include <QTimer>
 
 GameBoard::GameBoard(QWidget *parent) : QWidget(parent), score(0), cardClicks(0) {
-    // Создание и настройка элементов интерфейса
     QGridLayout *gridLayout = new QGridLayout(this);
     for (int i = 0; i < 9; ++i) {
         cards[i] = new QPushButton("Карта", this);
@@ -44,7 +43,7 @@ void GameBoard::onResetButtonClicked() {
 }
 
 void GameBoard::showResultMessage() {
-    QMessageBox::information(this, "Результат", "Вы набрали: " + QString::number(score) + " очков");
+    //QMessageBox::information(this, "Результат", "Вы набрали: " + QString::number(score) + " очков");
     resetGame();
 }
 

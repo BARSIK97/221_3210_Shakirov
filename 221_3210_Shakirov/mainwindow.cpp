@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 void MainWindow::onLoginButtonClicked() {
     QString pinCode = ui->edtPin->text();
-    if (pinCode == "12345") {
+    if (pinCode == "1234") {
         if (!gameBoard) {
             gameBoard = new GameBoard(this);
             ui->stackedWidget->addWidget(gameBoard);
