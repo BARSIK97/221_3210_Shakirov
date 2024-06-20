@@ -5,18 +5,19 @@
 
 GameBoard::GameBoard(QWidget *parent) : QWidget(parent), score(0), cardClicks(0) {
     QGridLayout *gridLayout = new QGridLayout(this);
-    for (int i = 0; i < 9; ++i) {
-        cards[i] = new QPushButton("Карта", this);
-        connect(cards[i], &QPushButton::clicked, this, &GameBoard::onCardClicked);
-        gridLayout->addWidget(cards[i], i / 3, i % 3);
-    }
 
     resetButton = new QPushButton("Сброс", this);
     connect(resetButton, &QPushButton::clicked, this, &GameBoard::onResetButtonClicked);
-    gridLayout->addWidget(resetButton, 3, 0);
+    gridLayout->addWidget(resetButton, 0, 0);
 
     scoreLabel = new QLabel("Очки: 0", this);
-    gridLayout->addWidget(scoreLabel, 3, 1);
+    gridLayout->addWidget(scoreLabel, 0, 1);
+
+    for (int i = 0; i < 9; ++i) {
+        cards[i] = new QPushButton("Карта", this);
+        connect(cards[i], &QPushButton::clicked, this, &GameBoard::onCardClicked);
+        gridLayout->addWidget(cards[i], (i / 3) + 1, i % 3);
+    }
 
     onResetButtonClicked();
 }
