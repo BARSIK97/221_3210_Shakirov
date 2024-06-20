@@ -43,7 +43,7 @@ void GameBoard::onResetButtonClicked() {
 }
 
 void GameBoard::showResultMessage() {
-    //QMessageBox::information(this, "Результат", "Вы набрали: " + QString::number(score) + " очков");
+    QMessageBox::information(this, "Результат", "Вы набрали: " + QString::number(score) + " очков");
     resetGame();
 }
 
